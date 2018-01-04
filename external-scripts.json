@@ -9,5 +9,5 @@
   "hubot-redis-brain",
   "hubot-rules",
   "hubot-shipit",
-  "hubot-code-review",
+  "hubot-code-review"
 ]
