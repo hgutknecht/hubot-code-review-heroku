@@ -8,7 +8,7 @@
     "hubot": "^2.19.0",
     "hubot-code-review": "^0.6.1",
     "hubot-diagnostics": "0.0.2",
-    "hubot-fliptable": ">= 0.0.0",
+    "hubot-fliptable": "^2.0.0",
     "hubot-google-images": "^0.2.7",
     "hubot-google-translate": "^0.2.1",
     "hubot-help": "^0.2.2",
