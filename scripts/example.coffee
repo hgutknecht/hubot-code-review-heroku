@@ -12,6 +12,29 @@ module.exports = (robot) ->
 
   robot.hear /badger/i, (res) ->
     res.send "Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS"
+
+  robot.hear /flip/i, (res) ->
+    const flips = [
+      '(╯°□°）╯︵ ┻━┻',
+      '┬─┬﻿ ノ( ゜-゜ノ)',
+      '(ノ ゜Д゜)ノ ︵ ┻━┻',
+      '(╯°□°)╯︵ ┻━┻ ︵ ╯(°□° ╯)',
+      '┬─┬﻿ ︵ /(.□. \）',
+      '‎(ﾉಥ益ಥ）ﾉ﻿ ┻━┻',
+      '(ノ^_^)ノ┻━┻ ┬─┬ ノ( ^_^ノ)',
+      '(╯°Д°）╯︵ /(.□ . \)',
+      "(╯'□')╯︵ ┻━┻",
+      '(ﾉಥДಥ)ﾉ︵┻━┻･/',
+      '(/ .□.)\ ︵╰(゜Д゜)╯︵ /(.□. \)',
+      '(._.) ~ ︵ ┻━┻',
+      'ʕノ•ᴥ•ʔノ ︵ ┻━┻',
+      '(/¯◡ ‿ ◡)/¯ ~ ┻━┻',
+      '(/¯◡ ‿ ◡)/¯ ~ ┻━┻',
+      '┻━┻ ︵ ლ(⌒-⌒ლ)',
+      'ʇǝʞɔɐɹq ︵ヽ(`Д´)ﾉ︵ ǝʞup'
+    ];
+    res.send msg.random(flips)
+
   #
   # robot.respond /open the (.*) doors/i, (res) ->
   #   doorType = res.match[1]

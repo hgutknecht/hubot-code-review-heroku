@@ -10,6 +10,5 @@
   "hubot-rules",
   "hubot-shipit",
   "hubot-code-review",
-  "hubot-heroku-keepalive",
-  "hubot-fliptable"
+  "hubot-heroku-keepalive"
 ]
