@@ -13,27 +13,27 @@ module.exports = (robot) ->
   robot.hear /badger/i, (res) ->
     res.send "Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS"
 
+  flips = [
+    '(╯°□°）╯︵ ┻━┻',
+    '┬─┬﻿ ノ( ゜-゜ノ)',
+    '(ノ ゜Д゜)ノ ︵ ┻━┻',
+    '(╯°□°)╯︵ ┻━┻ ︵ ╯(°□° ╯)',
+    '┬─┬﻿ ︵ /(.□. \）',
+    '‎(ﾉಥ益ಥ）ﾉ﻿ ┻━┻',
+    '(ノ^_^)ノ┻━┻ ┬─┬ ノ( ^_^ノ)',
+    '(╯°Д°）╯︵ /(.□ . \)',
+    "(╯'□')╯︵ ┻━┻",
+    '(ﾉಥДಥ)ﾉ︵┻━┻･/',
+    '(/ .□.)\ ︵╰(゜Д゜)╯︵ /(.□. \)',
+    '(._.) ~ ︵ ┻━┻',
+    'ʕノ•ᴥ•ʔノ ︵ ┻━┻',
+    '(/¯◡ ‿ ◡)/¯ ~ ┻━┻',
+    '(/¯◡ ‿ ◡)/¯ ~ ┻━┻',
+    '┻━┻ ︵ ლ(⌒-⌒ლ)',
+    'ʇǝʞɔɐɹq ︵ヽ(`Д´)ﾉ︵ ǝʞup'
+  ]
   robot.hear /flip/i, (res) ->
-    const flips = [
-      '(╯°□°）╯︵ ┻━┻',
-      '┬─┬﻿ ノ( ゜-゜ノ)',
-      '(ノ ゜Д゜)ノ ︵ ┻━┻',
-      '(╯°□°)╯︵ ┻━┻ ︵ ╯(°□° ╯)',
-      '┬─┬﻿ ︵ /(.□. \）',
-      '‎(ﾉಥ益ಥ）ﾉ﻿ ┻━┻',
-      '(ノ^_^)ノ┻━┻ ┬─┬ ノ( ^_^ノ)',
-      '(╯°Д°）╯︵ /(.□ . \)',
-      "(╯'□')╯︵ ┻━┻",
-      '(ﾉಥДಥ)ﾉ︵┻━┻･/',
-      '(/ .□.)\ ︵╰(゜Д゜)╯︵ /(.□. \)',
-      '(._.) ~ ︵ ┻━┻',
-      'ʕノ•ᴥ•ʔノ ︵ ┻━┻',
-      '(/¯◡ ‿ ◡)/¯ ~ ┻━┻',
-      '(/¯◡ ‿ ◡)/¯ ~ ┻━┻',
-      '┻━┻ ︵ ლ(⌒-⌒ლ)',
-      'ʇǝʞɔɐɹq ︵ヽ(`Д´)ﾉ︵ ǝʞup'
-    ];
-    res.send msg.random(flips)
+    res.send res.random flips
 
   #
   # robot.respond /open the (.*) doors/i, (res) ->
@@ -46,11 +46,11 @@ module.exports = (robot) ->
   # robot.hear /I like pie/i, (res) ->
   #   res.emote "makes a freshly baked pie"
   #
-  # lulz = ['lol', 'rofl', 'lmao']
-  #
-  # robot.respond /lulz/i, (res) ->
-  #   res.send res.random lulz
-  #
+  lulz = ['lol', 'rofl', 'lmao']
+
+  robot.hear /lulz/i, (res) ->
+    res.send res.random lulz
+
   # robot.topic (res) ->
   #   res.send "#{res.message.text}? That's a Paddlin'"
   #
