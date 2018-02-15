@@ -10,8 +10,22 @@
 
 module.exports = (robot) ->
 
+  robot.respond /diff (.*) (.*)$/i, (msg) ->
+    site = escape(msg.match[1])
+    env = escape(msg.match[2])
+    msg.http("https://dry-forest-27106.herokuapp.com/diff?site=#{site}&env=#{env}")
+      .get() (err, res, body) ->
+        try
+          msg.send body
+        catch error
+          msg.send "Much Fail. *sinister laugh*"
+
   robot.hear /badger/i, (res) ->
     res.send "Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS"
+
+  lulz = ['lol', 'rofl', 'lmao']
+  robot.hear /lulz/i, (res) ->
+    res.send res.random lulz
 
   flips = [
     '(╯°□°）╯︵ ┻━┻',
@@ -46,10 +60,6 @@ module.exports = (robot) ->
   # robot.hear /I like pie/i, (res) ->
   #   res.emote "makes a freshly baked pie"
   #
-  lulz = ['lol', 'rofl', 'lmao']
-
-  robot.hear /lulz/i, (res) ->
-    res.send res.random lulz
 
   # robot.topic (res) ->
   #   res.send "#{res.message.text}? That's a Paddlin'"
