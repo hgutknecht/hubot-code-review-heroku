@@ -10,6 +10,16 @@
 
 module.exports = (robot) ->
 
+  robot.respond /diff (.*) (.*)$/i, (msg) ->
+    site = escape(msg.match[1])
+    env = escape(msg.match[2])
+    msg.http("https://dry-forest-27106.herokuapp.com/diff?site=#{site}&env=#{env}")
+      .get() (err, res, body) ->
+        try
+          msg.send body
+        catch error
+          msg.send "Much Fail. *sinister laugh*"
+
   robot.hear /badger/i, (res) ->
     res.send "Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS"
 
