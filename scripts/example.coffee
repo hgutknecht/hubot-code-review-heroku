@@ -10,10 +10,6 @@
 
 module.exports = (robot) ->
 
-  # hubot greeting.
-  #
-  # (diff [site] [env]) - expose diff set. Options: site: env:
-
   # Description:
   #   Prints out current diff set.
   #
