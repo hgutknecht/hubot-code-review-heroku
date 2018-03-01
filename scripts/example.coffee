@@ -10,11 +10,12 @@
 
 module.exports = (robot) ->
 
-  # Description:
-  #   Prints out current diff set.
-  #
-  # Commands:
-  #   hubot diff [site] [env]
+  ###
+  @command [diff] [site] [env]
+  @desc    Will print out diffs current to codebase
+  @command @fluxybot diff [site] [env]
+  @desc    OPTIONS
+  ###
   robot.respond /diff (.*) (.*)$/i, (msg) ->
     site = escape(msg.match[1])
     env = escape(msg.match[2])
